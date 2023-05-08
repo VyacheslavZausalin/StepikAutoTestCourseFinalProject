@@ -1,3 +1,4 @@
+# Импортируем исключение
 from selenium.common.exceptions import NoSuchElementException
 # Создаем базовую страницу, от которой будут унаследованы все остальные классы.
 # В ней мы опишем вспомогательные методы для работы с драйвером.
@@ -14,6 +15,8 @@ class BasePage():
     def open(self):
         self.browser.get(self.url)
 
+    # реализуем метод is_element_present, в котором будем перехватывать исключение. В него будем передавать
+    # два аргумента: как искать (css, id, xpath и тд) и собственно что искать (строку-селектор).
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
