@@ -17,7 +17,7 @@ class ProductPage(BasePage):
     def is_product_in_basket(self):
         message = self.browser.find_element(*ProductpageLocators.INFO_ABOUT_NEW_BOOK_IN_BASKET).text
         book_name = self.browser.find_element(*ProductpageLocators.BOOK_TITLE).text
-        assert book_name in message\
+        assert book_name == message\
                , "There's no book's selected in basket!!"
         print(book_name)
         print(message)
