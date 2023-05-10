@@ -137,4 +137,3 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     time.sleep(2)
     page.go_to_login_page()
     time.sleep(2)
-    #login_page = LoginPage(browser, url=browser.current_url)  # Инициализируем LoginPage в теле теста
