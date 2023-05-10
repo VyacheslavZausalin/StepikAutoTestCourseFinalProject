@@ -1,5 +1,3 @@
-from .pages.login_page import LoginPage
-from .pages.main_page import MainPage
 from .pages.product_page import ProductPage
 import time
 import pytest
